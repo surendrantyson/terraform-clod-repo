@@ -67,17 +67,6 @@ resource "aws_instance" "terraform-ec2-1" {
   }
 }
 
-# Create RDS MySQL Database
-resource "aws_db_instance" "msql-bd-terraform" {
-  allocated_storage   = 5
-  engine              = "mysql"
-  instance_class      = "db.t2.micro"
-  name                = "mydb1"
-  username            = var.db_username
-  password            = var.db_password
-  skip_final_snapshot = true
-}
-
 # Resource Block to Create VPC in us-east-1 which uses default provider
 resource "aws_vpc" "vpc-mumbai-suren" {
   cidr_block = "10.1.0.0/16"

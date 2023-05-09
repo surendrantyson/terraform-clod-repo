@@ -25,15 +25,3 @@ variable "ec2_instance_type" {
   default = ["t2.micro", "t2.medium", "t2.large"]
   #default = "t2.micro"
 }
-
-variable "db_username" {
-  description = "AWS RDS Database Administrator Username"
-  type        = string
-  sensitive   = true
-}
-
-variable "db_password" {
-  description = "AWS RDS Database Administrator Password"
-  type        = string
-  sensitive   = true
-}
